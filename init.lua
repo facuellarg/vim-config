@@ -1,10 +1,8 @@
-require('my-packer')
+require('plugins')
+
+require('config/set')
 require('custom/lspconfig')
+require('custom/nvim-tree')
 require('custom/comment')
 require('config/mapping')
-
-
-
-
-
-
+require('config/autocommand')
