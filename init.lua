@@ -53,8 +53,8 @@ vim.keymap.set("n","<leader>w",":w<enter>")
 vim.keymap.set("i","<C-i>", "<Esc>I")
 vim.keymap.set("i","<C-a>", "<Esc>A")
 
---local nvim_lsp = require 'nvim_lsp'
---nvim_lsp.lua_analyzer.setup({})
+
+vim.keymap.set("n","<C-p>",":Telescope find_files<enter>")
 
 -- luasnip setup
 local luasnip = require 'luasnip'
@@ -101,8 +101,6 @@ cmp.setup {
   },
 }
 
--- vim.cmd('imap <silent><script><expr> <C-j> copilot#Accept("")')
---vim.cmd("let g:copilot_no_tab_map = v:true")
 vim.g.copilot_no_tab_map = true
 vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 vim.api.nvim_set_keymap("i", "<C-H>", 'copilot#Previous()', { silent = true, expr = true })
