@@ -7,4 +7,4 @@ require('custom/nvim-tree')
 
 require('custom/comment')
 require('config/mapping')
-require('config/autocommand')
+require('config/autocmd')
