@@ -30,4 +30,14 @@ return require('packer').startup(function(use)
 	use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
 	use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
 	use 'romgrk/barbar.nvim'
+
+
+	-- nvim-sitter
+	use {
+		'nvim-treesitter/nvim-treesitter',
+		run = function()
+			local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+			ts_update()
+		end,
+	}
 end)

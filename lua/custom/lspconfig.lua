@@ -21,7 +21,17 @@ lspconfig.clangd.setup {
 lspconfig.gopls.setup {
 	capabilities = capabilities,
 	cmd = { "gopls" },
-	filetpes = { "go" },
+	filetpes = { "go", "gomod", "gowork", "gotmpl" },
+	settings = {
+		gopls = {
+			analyses = {
+				unusedparams = true,
+			},
+			staticcheck = true,
+			completionDocumentation = true,
+			completeUnimported = true,
+		},
+	},
 }
 
 vim.keymap.set('n', 'gi', vim.lsp.buf.implementation)

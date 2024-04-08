@@ -23,3 +23,18 @@ let mapleader = " "
 
 map <Leader>q :q<Enter>
 map <Leader>w :w<Enter>
+" copy to clipboard
+
+vmap <Leader>y "+y
+nmap <Leader>y "+y
+vmap <Leader>Y "+yg_
+nmap <Leader>Y "+yg_
+
+
+
+" vim.keymap.set("v", "<leader>y", '"+y')
+" vim.keymap.set("n", "<leader>y", '"+y')
+" vim.keymap.set("v", "<leader>Y", '"+yg_')
+" vim.keymap.set("n", "<leader>Y", 'yg_')
+"
+" Map Ctrl+P to paste text at the beginning of the word
