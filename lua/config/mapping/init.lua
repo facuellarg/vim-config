@@ -5,8 +5,6 @@ require('config/mapping/copilot')
 
 vim.g.mapleader = " "
 
--- vim.g.go_def_mode = 'gopls'
--- vim.g.go_info_mode = 'gopls'
 
 vim.keymap.set("n", "<leader>q", ":q<enter>")
 vim.keymap.set("n", "<leader>w", ":w<enter>")
@@ -27,6 +25,11 @@ vim.keymap.set("v", "<leader>p", '"+p')
 vim.keymap.set("v", "<leader>P", '"+P')
 
 
+-- scape terminal mode
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+
+--open new terminal below
+vim.keymap.set("n", "<leader>tt", ":below 10sp term://zsh<enter>")
 
 -- Navigating between split windows
 vim.api.nvim_set_keymap('n', '<C-k>', ':wincmd k<CR>', { silent = true })
