@@ -1,0 +1,5 @@
+require('custom/barbar')
+require('custom/comment')
+require('custom/nvim-tree')
+require('custom/lspconfig')
+require('custom/treesitter')

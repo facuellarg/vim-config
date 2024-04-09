@@ -1,4 +1,6 @@
 require('config/mapping/barbar')
+require('config/mapping/telescope')
+require('config/mapping/nvimtree')
 require('config/mapping/copilot')
 
 vim.g.mapleader = " "
@@ -32,9 +34,7 @@ vim.api.nvim_set_keymap('n', '<C-j>', ':wincmd j<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<C-h>', ':wincmd h<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<C-l>', ':wincmd l<CR>', { silent = true })
 
--- nvimtree
-vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { silent = true })
 
-
--- Telescope
-vim.keymap.set("n", "<C-p>", ":Telescope find_files<enter>")
+-- Open vertical split and horizontal split
+vim.keymap.set("n", "<leader>v", ":vsplit<enter>")
+vim.keymap.set("n", "<leader>h", ":split<enter>")
