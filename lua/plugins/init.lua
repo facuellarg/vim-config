@@ -48,6 +48,16 @@ return require('packer').startup(function(use)
 	--theme colorscheme
 	use 'folke/tokyonight.nvim'
 
-
+	--go
 	use 'fatih/vim-go'
+
+	--mason
+	-- use 'Mofiqul/vscode.nvim'
+	use {
+    		"williamboman/mason.nvim",
+		'williamboman/mason-lspconfig.nvim'
+	}
+
+
+
 end)
