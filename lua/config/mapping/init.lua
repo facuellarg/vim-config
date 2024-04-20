@@ -27,9 +27,11 @@ vim.keymap.set("v", "<leader>P", '"+P')
 
 -- scape terminal mode
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+-- close terminal buffer
+vim.keymap.set("t", "<leader><Esc>", "<C-\\><C-n>:bd!<enter>")
 
 --open new terminal below
-vim.keymap.set("n", "<leader>tt", ":below 10sp term://zsh<enter>")
+vim.keymap.set("n", "<leader>tt", ":below 10sp term://zsh<enter>i")
 
 -- Navigating between split windows
 vim.api.nvim_set_keymap('n', '<C-k>', ':wincmd k<CR>', { silent = true })
@@ -41,3 +43,8 @@ vim.api.nvim_set_keymap('n', '<C-l>', ':wincmd l<CR>', { silent = true })
 -- Open vertical split and horizontal split
 vim.keymap.set("n", "<leader>v", ":vsplit<enter>")
 vim.keymap.set("n", "<leader>h", ":split<enter>")
+
+
+-- go definition
+vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
+vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")

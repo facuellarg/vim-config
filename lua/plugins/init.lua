@@ -54,10 +54,10 @@ return require('packer').startup(function(use)
 	--mason
 	-- use 'Mofiqul/vscode.nvim'
 	use {
-    		"williamboman/mason.nvim",
+		"williamboman/mason.nvim",
 		'williamboman/mason-lspconfig.nvim'
 	}
 
-
-
+	--rust tools
+	use 'simrat39/rust-tools.nvim'
 end)
