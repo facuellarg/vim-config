@@ -48,3 +48,11 @@ vim.keymap.set("n", "<leader>h", ":split<enter>")
 -- go definition
 vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
+
+--go to usage
+vim.keymap.set("n", "gu", "<cmd>lua vim.lsp.buf.references()<CR>")
+vim.keymap.set("n", "gU", "<cmd>lua vim.lsp.buf.hover()<CR>")
+
+--rename symbol
+vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
+vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>")
