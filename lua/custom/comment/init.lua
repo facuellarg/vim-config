@@ -1,17 +1,18 @@
 require('Comment').setup {
 	-- ignores empty lines
+	
 	ignore = '^$',
 	toggler = {
 		---line-comment keymap
-		line = '<C-_>',
+		line = '<C-/>',
 		---block-comment keymap
-		block = '<C-S-_>',
+		block = '<C-S-/>',
 	},
 	opleader = {
 		---Line-comment keymap
-		line = '<C-_>',
+		line = '<C-/>',
 		---Block-comment keymap
-		block = '<C-S-_>',
+		block = '<C-S-/>',
 	},
 	mappings = {
 		basic = true,
