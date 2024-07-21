@@ -23,14 +23,17 @@ let mapleader = " "
 
 map <Leader>q :q<Enter>
 map <Leader>w :w<Enter>
-" copy to clipboard
 
+
+" copy to clipboard
 vmap <Leader>y "+y
 nmap <Leader>y "+y
 vmap <Leader>Y "+yg_
 nmap <Leader>Y "+yg_
 
-
+# paste from clipboard
+vmap <leader>p "+p
+nmap <leader>p "+p
 
 " vim.keymap.set("v", "<leader>y", '"+y')
 " vim.keymap.set("n", "<leader>y", '"+y')
