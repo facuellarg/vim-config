@@ -34,6 +34,27 @@ lspconfig.gopls.setup {
 	},
 }
 
+
+-- lspconfig for rust
+
+-- lspconfig['rust_analyzer'].setup {
+-- 	capabilities = capabilities,
+-- 	cmd = { "rust-analyzer" },
+-- 	filetpes = { "rust" },
+-- 	settings = {
+-- 		["rust-analyzer"] = {
+-- 			checkOnSave = {
+-- 				command = "clippy",
+-- 			},
+-- 			-- completition
+-- 			completion = {
+-- 				enableSnippets = true,
+-- 			},
+
+-- 		},
+-- 	},
+-- }
+
 vim.keymap.set('n', 'gi', vim.lsp.buf.implementation)
 
 -- luasnip setup

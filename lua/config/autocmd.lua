@@ -1,6 +1,7 @@
 vim.api.nvim_create_autocmd("BufWritePre", {
 	-- buffer = buffer,
 	callback = function()
+		-- if vim.bo.filetype == "lua" then
 		vim.lsp.buf.format { async = false }
 	end
 
@@ -11,11 +12,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function()
 		-- vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
 		-- vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>")
-
-
-
-
-
 
 		-- --go to usage
 		vim.keymap.set("n", "gu", "<cmd>lua vim.lsp.buf.references()<CR>")

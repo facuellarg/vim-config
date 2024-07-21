@@ -31,7 +31,7 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 vim.keymap.set("t", "<leader><Esc>", "<C-\\><C-n>:bd!<enter>")
 
 --open new terminal below
-vim.keymap.set("n", "<leader>tt", ":below 10sp term://zsh<enter>i")
+vim.keymap.set("n", "<leader>tt", ":below 10sp term://bash<enter>i")
 
 -- Navigating between split windows
 vim.api.nvim_set_keymap('n', '<C-k>', ':wincmd k<CR>', { silent = true })
@@ -56,3 +56,10 @@ vim.keymap.set("n", "gU", "<cmd>lua vim.lsp.buf.hover()<CR>")
 --rename symbol
 vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
 vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>")
+
+
+function ToggleFolding()
+	vim.opt.foldenable = not vim.opt.foldenable
+end
+
+vim.keymap.set("n", "<leader>ff", ":lua ToggleFolding()<CR>")
