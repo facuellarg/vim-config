@@ -38,3 +38,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		-- ]]
 	end
 })
+
+
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+	callback = function()
+		require("vim.highlight").on_yank({ higroup = "Search", timeout = 300 })
+	end
+})
