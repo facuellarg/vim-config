@@ -1,7 +1,7 @@
 local lspconfig = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-local servers = { 'bashls', 'lua_ls', 'clangd', 'rust_analyzer', 'pyright', 'tsserver' }
+local servers = { 'bashls', 'lua_ls', 'clangd', 'rust_analyzer', 'pyright', 'ts_ls' }
 
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup {

@@ -8,12 +8,8 @@ return require('packer').startup(function(use)
 	use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
 	use 'L3MON4D3/LuaSnip'  -- Snippets plugin
 
-	use {
-		'numToStr/Comment.nvim',
-		config = function()
-			require('Comment').setup()
-		end
-	}
+	use 'numToStr/Comment.nvim'	
+
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.2',
 		requires = { { 'nvim-lua/plenary.nvim' } }
